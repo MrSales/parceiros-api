@@ -223,9 +223,9 @@ Request
   "Cliente": {
     "Nome": "Fulano",
     "Email": "fulano@mrsales.com.br",
-    "Telefone": "11 996528896", //opcional
-    "Celular": "11 996528896",  //opcional
-    "CPF": "030.848.781-88",    //opcional
+    "Telefone": "11 0000-0000", //opcional
+    "Celular": "11 00000-0000",  //opcional
+    "CPF": "000.000.000-00",    //opcional
     "Cidade": "Osasco",         //opcional
     "UF": "SP"                  //opcional
   },
