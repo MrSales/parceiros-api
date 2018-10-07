@@ -13,42 +13,14 @@
 * https://api.mrsales.com.br
 
 
-#### Autenticação
+#### Autenticação (atualizado em 07/10)
 
-Para acessar qualquer serviço da API é necessário passar o Bearer Token no header, todos os tokens gerados expira em 24horas.
+##### Para acessar qualquer serviço da API é necessário passar o Token fixo no header. (Caso não possua um token válido, solicitar em suporte@mrsales.com.br)
 
-* Endpoint: parceiro/autenticar
-* Content-type: application/json
-* Verbo: POST
-
-Request
+Exemplo do header
 
 ```json
-
-{
-  "Login": "XXXXX",
-  "Senha": "XXXXX",
-  "CNPJ": "XX.XXX.XXX/XXXX-XX"
-}
-
-```
-
-Response
-
-```json
-
-{
-    "Data": {
-        "Token": "XXXXXX",
-        "Usuario": {
-            "UsuarioID": 0,
-            "Nome": "Emerson Jose",
-            "Email": "emerson@mrsales.com.br"
-        }
-    },
-    "Success": true,
-    "Message": null
-}
+[{"key":"Authorization","value":"{{token}}"}]
 
 ```
 
@@ -62,7 +34,7 @@ Lista de lojas que o usuário tem permissão para cadastrar lead.
 
 Request
 
-* Necessário somente passar o token no header
+* Necessário informar token no header
 
 Response
 
@@ -150,6 +122,45 @@ Response
             "TestDriveDomingoFim": "15:00",
             "TestDriveDuracao": 20
         }
+    ],
+    "Success": true,
+    "Message": null
+}
+
+```
+
+#### Catálogo - Horários disponiveis para agendamento (novo - atualizado em 07/10/2018)
+
+Listar os horários disponível para agendamento de um veículo
+
+* Endpoint: parceiro/catalogo-horario
+* Content-type: application/json
+* Verbo: POST
+
+Request
+
+1. Necessário informar token no header
+2. Body 
+
+```json
+
+{
+	 "LojaID": {{lojaID}},
+   "LojaCatalogoID": {{lojaCatalogoID}},
+    "Dia": "2018-10-08"
+}
+```
+
+Response
+
+```json
+
+{
+    "Data": [
+        "08:00",
+        "09:00",
+        "09:30",
+        "10:00"
     ],
     "Success": true,
     "Message": null
