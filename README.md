@@ -145,9 +145,9 @@ Request
 ```json
 
 {
-	 "LojaID": {{lojaID}},
-   "LojaCatalogoID": {{lojaCatalogoID}},
-    "Dia": "2018-10-08"
+   "LojaID": X,
+   "LojaCatalogoID": X,
+   "Dia": "2018-10-08"
 }
 ```
 
