@@ -36,6 +36,10 @@ Request
 
 * Necessário informar token no header
 
+Filtro (novo - atualizado em 11/10/2018)
+
+* Endpoint: parceiro/lojas?BandeiraID=valor
+
 Response
 
 ```json
@@ -79,6 +83,35 @@ Response
                     "TelefonePosVenda": "00 0000-0000"
                 }
             ]
+        }
+    ],
+    "Success": true,
+    "Message": null
+}
+
+```
+
+#### Bandeiras (novo - atualizado em 11/10/2018)
+
+Listar de bandeiras com base nas lojas associadas no token
+
+* Endpoint: parceiro/bandeiras
+* Content-type: application/json
+* Verbo: GET
+
+Request
+
+1. Necessário informar token no header
+
+Response
+
+```json
+
+{
+    "Data": [
+        {
+            "BandeiraID": 1,
+            "Nome": "Hyundai"
         }
     ],
     "Success": true,
