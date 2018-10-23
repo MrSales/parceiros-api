@@ -36,9 +36,11 @@ Request
 
 * Necessário informar token no header
 
-Filtro (novo - atualizado em 11/10/2018)
+Filtro (novo - atualizado em 23/10/2018)
 
 * Endpoint: parceiro/lojas?BandeiraID=valor
+* Endpoint: parceiro/lojas?marca=X&modelo=Y
+* Endpoint: parceiro/lojas?observacao=X
 
 Response
 
