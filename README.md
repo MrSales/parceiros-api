@@ -13,7 +13,7 @@
 * https://api.mrsales.com.br
 
 
-#### Autenticação (atualizado em 07/10)
+#### Autenticação
 
 ##### Para acessar qualquer serviço da API é necessário passar o Token fixo no header. (Caso não possua um token válido, solicitar em suporte@mrsales.com.br)
 
@@ -36,7 +36,7 @@ Request
 
 * Necessário informar token no header
 
-Filtro (novo - atualizado em 23/10/2018)
+Filtro
 
 * Endpoint: parceiro/lojas?BandeiraID=valor
 * Endpoint: parceiro/lojas?marca=X&modelo=Y
@@ -93,9 +93,9 @@ Response
 
 ```
 
-#### Bandeiras (novo - atualizado em 11/10/2018)
+#### Bandeiras
 
-Listar de bandeiras com base nas lojas associadas no token
+Lista de bandeiras com base nas lojas associadas no token
 
 * Endpoint: parceiro/bandeiras
 * Content-type: application/json
@@ -114,6 +114,40 @@ Response
         {
             "BandeiraID": 1,
             "Nome": "Hyundai"
+        }
+    ],
+    "Success": true,
+    "Message": null
+}
+
+```
+
+#### Tipo Lead (novo - atualizado em 26/11/2018)
+
+Lista de tipo de lead com base no seguimentos de atendimento da Concessionárias
+
+* Endpoint: parceiro/tipolead/{contaID}
+* Content-type: application/json
+* Verbo: GET
+
+Request
+
+1. Necessário informar token no header
+2. Necessário informar o ContaID no endpoint
+
+Response
+
+```json
+
+{
+    "Data": [
+        {
+            "TipoLeadID": 999,
+            "Descricao": "Consórcio"
+        },
+		{
+            "TipoLeadID": 999,
+            "Descricao": "SAC"
         }
     ],
     "Success": true,
@@ -164,7 +198,7 @@ Response
 
 ```
 
-#### Catálogo - Horários disponiveis para agendamento (novo - atualizado em 07/10/2018)
+#### Catálogo - Horários disponiveis para agendamento
 
 Listar os horários disponível para agendamento de um veículo
 
@@ -180,8 +214,8 @@ Request
 ```json
 
 {
-   "LojaID": X,
-   "LojaCatalogoID": X,
+   "LojaID": 0,
+   "LojaCatalogoID": 0,
    "Dia": "2018-10-08"
 }
 ```
@@ -223,16 +257,21 @@ Request
   "Cliente": {
     "Nome": "Fulano",
     "Email": "fulano@mrsales.com.br",
-    "Telefone": "11 0000-0000", //opcional
-    "Celular": "11 00000-0000", //opcional
-    "CPF": "030.848.781-88",   //opcional
-    "Cidade": "Osasco",        //opcional
-    "UF": "SP"                 //opcional
+    "Telefone": "11 0000-0000",  //opcional
+    "Celular": "11 00000-0000",  //opcional
+    "Cidade": "Osasco",          //opcional
+    "UF": "SP",                 //opcional
+    "CPF": "000.000.000-00",    //opcional
+    "IsPJ": null,               //opcional 
+    "RazaoSocial": null         //opcional,
+    "CNPJ": null                //opcional
   },
   "Assunto": "Teste Parceiro",
   "Mensagem": "Teste parceiro msg",
   "MidiaID": 0,
-  "LojaCatalogoID": 0
+  "LojaCatalogoID": null,      //opcional
+  "IsZeroKM": false,
+  "TipoLeadID": null           //opcional
 }
 
 ```
