@@ -41,6 +41,7 @@ Filtro
 * Endpoint: parceiro/lojas?BandeiraID=valor
 * Endpoint: parceiro/lojas?marca=X&modelo=Y
 * Endpoint: parceiro/lojas?observacao=X
+* Endpoint: parceiro/lojas?cidade=Osasco&estado=SP
 
 Response
 
