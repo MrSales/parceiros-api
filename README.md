@@ -332,4 +332,41 @@ Response
 
 ```
 
+#### LeadPhone - Cadastramento de ligações
+
+API para cadastramento de ligações
+
+* Endpoint: /v1/phonetrack/CNPJ
+* Content-type: application/json
+* Verbo: POST
+
+Request
+
+1. Necessário informar token no header
+2. Body 
+
+```json
+
+{
+  "TelefoneOrigem": "0000000000",
+  "TelefoneCliente": "1111111111",
+  "UF": "SP",
+  "Cidade": "São Paulo",
+  "UrlArquivo": "http://arquivo-de-audio.mp3",
+  "Duracao" : "90"
+}
+```
+
+Response
+
+```json
+
+{
+    "Data": true,
+    "Success": true,
+    "Message": null
+}
+
+```
+
 > dúvidas ou problemas relacionadas API suporte@mrsales.com.br
