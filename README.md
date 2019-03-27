@@ -273,6 +273,8 @@ Request
   "LojaCatalogoID": null,      //opcional
   "IsZeroKM": false,
   "TipoLeadID": null           //opcional
+  "UTM_CAMPAIGN": null           //opcional ex.conheca-novo-carro
+  "UTM_SOURCE": null           //opcional   ex. UOL, Globo, Google Display, Facebook ads
 }
 
 ```
