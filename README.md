@@ -123,6 +123,77 @@ Response
 
 ```
 
+#### Usuário - Cadastro
+
+* Endpoint: parceiro/usuario
+* Content-type: application/json
+* Verbo: POST
+
+*Obs: necessário solicitar permissão de cadastrar usuário no token.
+
+Request
+
+1. Necessário informar token no header
+
+Request
+
+```json
+{
+  "Nome": "TesteApi1",
+  "Email": "testeapi1@teste.com",
+  "Login": "testeapi",
+  "Senha": "xxxx",
+  "Visualiza0KM": true,
+  "VisualizaSeminovos": true,
+  "Lojas": [0] //informar o código da loja que deseja liberar o acesso
+}
+
+```
+
+Response
+
+```json
+
+{
+    "Data": 0,
+    "Success": true,
+    "Message": ""
+}
+
+```
+
+#### Usuário - Ativar/Inativar
+
+* Endpoint: parceiro/usuario/status
+* Content-type: application/json
+* Verbo: POST
+
+Request
+
+1. Necessário informar token no header
+
+Request
+
+```json
+{
+  "Login": "",  //Login do Usuário no mrsales
+  "Status": false
+}
+
+```
+
+Response
+
+```json
+
+{
+    "Data": 0,
+    "Success": true,
+    "Message": ""
+}
+
+```
+
 #### Tipo Lead (novo - atualizado em 26/11/2018)
 
 Lista de tipo de lead com base no seguimentos de atendimento da Concessionárias
