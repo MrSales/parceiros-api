@@ -335,8 +335,9 @@ Request
     "UF": "SP",                 //opcional
     "CPF": "000.000.000-00",    //opcional
     "IsPJ": null,               //opcional 
-    "RazaoSocial": null         //opcional,
-    "CNPJ": null                //opcional
+    "RazaoSocial": null,         //opcional
+    "CNPJ": null,                //opcional
+    "AceitaReceberOfertas": true //opcional
   },
   "Assunto": "Teste Parceiro",
   "Mensagem": "Teste parceiro msg",
