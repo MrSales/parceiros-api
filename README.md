@@ -20,15 +20,9 @@
 
 ✅ [Consulta de Bandeiras](#bandeiras)
 
-✅ [Cadastro de Usuários](#usuário---cadastro)
-
-✅ [Atualizar Status do Usuários](#usuário---ativarinativar)
-
 ✅ [Consulta de Tipo de Leads](#tipo-lead-novo---atualizado-em-26112018)
 
 ✅ [Catalogo de Veiculos](#catálogo-da-loja)
-
-✅ [Catálogo de Veículos](#catálogo-da-loja)
 
 ✅ [Consulta de Leads](#consulta-de-leads-v1)
 
@@ -39,6 +33,10 @@
 ✅ [Cadastrar Test Drive](#cadastrar-lead-test-drive)
 
 ✅ [Cadastrar Ligação](#leadphone---cadastramento-de-ligações)
+
+✅ [Cadastro de Usuários](#usuário---cadastro)
+
+✅ [Atualizar Status do Usuários](#usuário---ativarinativar)
 
 #### Autenticação
 
@@ -146,77 +144,6 @@ Response
     ],
     "Success": true,
     "Message": null
-}
-
-```
-
-#### Usuário - Cadastro
-
-* Endpoint: parceiro/usuario
-* Content-type: application/json
-* Verbo: POST
-
-*Obs: necessário solicitar permissão de cadastrar usuário no token.
-
-Request
-
-1. Necessário informar token no header
-
-Request
-
-```json
-{
-  "Nome": "TesteApi1",
-  "Email": "testeapi1@teste.com",
-  "Login": "testeapi",
-  "Senha": "xxxx",
-  "Visualiza0KM": true,
-  "VisualizaSeminovos": true,
-  "Lojas": [0] //informar o código da loja que deseja liberar o acesso
-}
-
-```
-
-Response
-
-```json
-
-{
-    "Data": 0,
-    "Success": true,
-    "Message": ""
-}
-
-```
-
-#### Usuário - Ativar/Inativar
-
-* Endpoint: parceiro/usuario/status
-* Content-type: application/json
-* Verbo: POST
-
-Request
-
-1. Necessário informar token no header
-
-Request
-
-```json
-{
-  "Login": "",  //Login do Usuário no mrsales
-  "Status": false
-}
-
-```
-
-Response
-
-```json
-
-{
-    "Data": 0,
-    "Success": true,
-    "Message": ""
 }
 
 ```
@@ -517,6 +444,77 @@ Response
     "Data": true,
     "Success": true,
     "Message": null
+}
+
+```
+
+#### Usuário - Cadastro
+
+* Endpoint: parceiro/usuario
+* Content-type: application/json
+* Verbo: POST
+
+*Obs: necessário solicitar permissão de cadastrar usuário no token.
+
+Request
+
+1. Necessário informar token no header
+
+Request
+
+```json
+{
+  "Nome": "TesteApi1",
+  "Email": "testeapi1@teste.com",
+  "Login": "testeapi",
+  "Senha": "xxxx",
+  "Visualiza0KM": true,
+  "VisualizaSeminovos": true,
+  "Lojas": [0] //informar o código da loja que deseja liberar o acesso
+}
+
+```
+
+Response
+
+```json
+
+{
+    "Data": 0,
+    "Success": true,
+    "Message": ""
+}
+
+```
+
+#### Usuário - Ativar/Inativar
+
+* Endpoint: parceiro/usuario/status
+* Content-type: application/json
+* Verbo: POST
+
+Request
+
+1. Necessário informar token no header
+
+Request
+
+```json
+{
+  "Login": "",  //Login do Usuário no mrsales
+  "Status": false
+}
+
+```
+
+Response
+
+```json
+
+{
+    "Data": 0,
+    "Success": true,
+    "Message": ""
 }
 
 ```
