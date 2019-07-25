@@ -12,6 +12,33 @@
 ##### Produção
 * https://api.mrsales.com.br
 
+## Features   
+
+✅ [Autenticação](#autenticação)
+
+✅ [Consulta de Lojas](#lojas)
+
+✅ [Consulta de Bandeiras](#bandeiras)
+
+✅ [Cadastro de Usuários](#usuário---cadastro)
+
+✅ [Atualizar Status do Usuários](#usuário---ativarinativar)
+
+✅ [Consulta de Tipo de Leads](#tipo-lead-novo---atualizado-em-26112018)
+
+✅ [Catalogo de Veiculos](#catálogo-da-loja)
+
+✅ [Catálogo de Veículos](#catálogo-da-loja)
+
+✅ [Consulta de Leads](#consulta-de-leads-v1)
+
+✅ [Consulta de Horários para Test Drive](#catálogo---horários-disponiveis-para-agendamento)
+
+✅ [Cadastrar Lead](#cadastrar-lead)
+
+✅ [Cadastrar Test Drive](#cadastrar-lead-test-drive)
+
+✅ [Cadastrar Ligação](#leadphone---cadastramento-de-ligações)
 
 #### Autenticação
 
