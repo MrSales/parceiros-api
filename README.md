@@ -12,6 +12,9 @@
 ##### Produção
 * https://api.mrsales.com.br
 
+#### Example Postman
+[Collection Postman com exemplo práticos](https://raw.githubusercontent.com/MrSales/parceiros-api/master/mr.%20Sales%20-%20Parceiros.postman_collection.json)
+
 ## Features   
 
 ✅ [Autenticação](#autenticação)
