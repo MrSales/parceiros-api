@@ -270,6 +270,57 @@ Response
 
 ```
 
+#### Consulta de Leads (v1)
+
+Lista os 100 ultimos leads gerados 
+
+* Endpoint: parceiro/leads/codigo-loja
+* Content-type: application/json
+* Verbo: GET
+
+Request
+
+1. Necessário informar token no header
+2. Substituir codigo-loja do endpoint pelo Id da Loja
+
+Response
+
+```json
+
+{
+    "Data": [
+        {
+            "DataCriacao": "2019-07-19T10:45:31.983",
+            "LojaID": 0,
+            "TipoLeadID": null,
+            "Assunto": "Assunto teste....",
+            "Mensagem": "mensagem teste....",
+            "IsZeroKM": true,
+            "UTM_SOURCE": null,
+            "UTM_CAMPAIGN": null,
+            "Cliente": {
+                "Nome": "Cliente Testee",
+                "Email": "teste@gmail.com",
+                "Telefone": "(11) 9-5463-0464",
+                "Celular": "11 0000-0000",
+                "CPF": "000.000.000-00",
+                "CNPJ": null,
+                "IsPJ": null,
+                "RazaoSocial": null,
+                "Cidade": null,
+                "UF": null,
+                "AceitaReceberOfertas": null
+            },
+            "MidiaID": 1,
+            "LojaCatalogoID": null
+        }
+    ],
+    "Success": true,
+    "Message": null
+}
+
+```
+
 #### Catálogo - Horários disponiveis para agendamento
 
 Listar os horários disponível para agendamento de um veículo
