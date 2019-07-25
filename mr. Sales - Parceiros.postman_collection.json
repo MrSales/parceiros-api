@@ -1,0 +1,236 @@
+{
+	"info": {
+		"_postman_id": "6a0813c6-6726-4baa-94c0-1d9425ce3552",
+		"name": "mr. Sales - Parceiros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastro Proposta 0KM",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r  \"LojaID\": {{lojaID}},\r  \"Cliente\": {\r    \"Nome\": \"Cliente Teste\",\r    \"Email\": \"teste@mrsales.com.br\",\r    \"Telefone\": null,\r    \"Celular\": \"11 0000-0000\",\r    \"CPF\": null,\r    \"Cidade\": \"Osasco\",\r    \"UF\": \"SP\",\r    \"CNPJ\": null,\r    \"IsPJ\": null,\r    \"RazaoSocial\": null\r  },\r  \"Assunto\": \"Teste Parceiro\",\r  \"Mensagem\": \"Teste parceiro msg\",\r  \"MidiaID\": 1,\r  \"LojaCatalogoID\": {{lojaCatalogoID}},\r  \"TipoLeadID\": null\r}"
+				},
+				"url": {
+					"raw": "{{url}}/parceiro/lead",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"parceiro",
+						"lead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cadastro Proposta Test Drive",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r  \"LojaID\": {{lojaID}},\r  \"DataHoraAgendamento\": \"2019-01-25 08:30\",\r  \"Cliente\": {\r    \"Nome\": \"Cliente Teste\",\r    \"Email\": \"teste@hotmail.com\",\r    \"Telefone\": \"11 00000-0000\",\r    \"Celular\": \"11 00000-0000\",\r    \"CPF\": \"000.000.000-00\",\r    \"Cidade\": \"Osasco\",\r    \"UF\": \"SP\"\r  },\r  \"MidiaID\": 1,\r  \"LojaCatalogoID\": 1\r}"
+				},
+				"url": {
+					"raw": "{{url}}/parceiro/testdrive",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"parceiro",
+						"testdrive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lojas",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/parceiro/lojas?estado=MG",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"parceiro",
+						"lojas"
+					],
+					"query": [
+						{
+							"key": "estado",
+							"value": "MG"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Leads",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/parceiro/leads/{{lojaID}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"parceiro",
+						"leads",
+						"{{lojaID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalogo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/parceiro/catalogo/{{lojaID}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"parceiro",
+						"catalogo",
+						"{{lojaID}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Catalogo Horario",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t \"LojaID\": {{lojaID}},\n     \"LojaCatalogoID\": 36,\n     \"Dia\": \"2018-10-08\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/parceiro/catalogo-horario",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"parceiro",
+						"catalogo-horario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bandeiras",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "{{token}}"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/parceiro/bandeiras",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"parceiro",
+						"bandeiras"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Tipo Lead",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/parceiro/tipolead/{{lojaID}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"parceiro",
+						"tipolead",
+						"{{lojaID}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
