@@ -353,8 +353,11 @@ Request
   "LojaCatalogoID": null,      //opcional
   "IsZeroKM": false,
   "TipoLeadID": null           //opcional
-  "UTM_CAMPAIGN": null           //opcional ex.conheca-novo-carro
-  "UTM_SOURCE": null           //opcional   ex. UOL, Globo, Google Display, Facebook ads
+  "UTM_CAMPAIGN": null,           //opcional ex.conheca-novo-carro
+  "UTM_SOURCE": null,           //opcional   ex. UOL, Globo, Google Display, Facebook ads
+  "UTM_CONTENT": null,           //opcional  
+  "UTM_MEDIUM": null,           //opcional   
+  "UTM_TERM": null           //opcional   
 }
 
 ```
@@ -398,7 +401,12 @@ Request
     "UF": "SP"                  //opcional
   },
   "MidiaID": 0,
-  "LojaCatalogoID": 0
+  "LojaCatalogoID": 0,
+  "UTM_CAMPAIGN": null,           //opcional ex.conheca-novo-carro
+  "UTM_SOURCE": null,           //opcional   ex. UOL, Globo, Google Display, Facebook ads
+  "UTM_CONTENT": null,           //opcional  
+  "UTM_MEDIUM": null,           //opcional   
+  "UTM_TERM": null           //opcional   
 }
 
 ```
