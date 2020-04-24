@@ -349,7 +349,7 @@ Request
   },
   "Assunto": "Teste Parceiro",
   "Mensagem": "Teste parceiro msg",
-  "MidiaID": 0,
+  "MidiaID": 1,
   "LojaCatalogoID": null,      //opcional
   "IsZeroKM": false,
   "TipoLeadID": null           //opcional
