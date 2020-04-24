@@ -338,7 +338,7 @@ Request
   "Cliente": {
     "Nome": "Fulano",
     "Email": "fulano@mrsales.com.br",
-    "Telefone": null,  //opcional
+    "Telefone": null,
     "Celular": "11 00000-0000",  
     "Cidade": null,          
     "UF": null,                 
