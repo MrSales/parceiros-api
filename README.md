@@ -327,6 +327,7 @@ Response
 Request
 
 1. Necessário informar token no header
+2. Os campos vazio (NULL) não são obrigatórios, mas caso seja exigência do cliente essas informações, deve ser preenchido para sair no cadastro e relatórios.
 
 Request
 
@@ -337,27 +338,27 @@ Request
   "Cliente": {
     "Nome": "Fulano",
     "Email": "fulano@mrsales.com.br",
-    "Telefone": "11 0000-0000",  //opcional
-    "Celular": "11 00000-0000",  //opcional
-    "Cidade": "Osasco",          //opcional
-    "UF": "SP",                 //opcional
-    "CPF": "000.000.000-00",    //opcional
-    "IsPJ": null,               //opcional 
-    "RazaoSocial": null,         //opcional
-    "CNPJ": null,                //opcional
-    "AceitaReceberOfertas": true //opcional
+    "Telefone": null,  //opcional
+    "Celular": "11 00000-0000",  
+    "Cidade": null,          
+    "UF": null,                 
+    "CPF":  null,    
+    "IsPJ": null,             
+    "RazaoSocial": null,         
+    "CNPJ": null,               
+    "AceitaReceberOfertas": true 
   },
   "Assunto": "Teste Parceiro",
   "Mensagem": "Teste parceiro msg",
   "MidiaID": 1,
-  "LojaCatalogoID": null,      //opcional
+  "LojaCatalogoID": null,      
   "IsZeroKM": false,
-  "TipoLeadID": null           //opcional
-  "UTM_CAMPAIGN": null,           //opcional ex.conheca-novo-carro
-  "UTM_SOURCE": null,           //opcional   ex. UOL, Globo, Google Display, Facebook ads
-  "UTM_CONTENT": null,           //opcional  
-  "UTM_MEDIUM": null,           //opcional   
-  "UTM_TERM": null           //opcional   
+  "TipoLeadID": null,        
+  "UTM_CAMPAIGN": null,      
+  "UTM_SOURCE": null,          
+  "UTM_CONTENT": null,            
+  "UTM_MEDIUM": null,            
+  "UTM_TERM": null            
 }
 
 ```
