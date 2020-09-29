@@ -343,7 +343,8 @@ Request
     "CPF":  null,    
     "IsPJ": null,             
     "RazaoSocial": null,         
-    "CNPJ": null,               
+    "CNPJ": null, 
+    "DataNascimento": "yyyy-MM-dd",
     "AceitaReceberOfertas": true 
   },
   "Assunto": "Teste Parceiro",
