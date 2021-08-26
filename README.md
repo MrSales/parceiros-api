@@ -345,7 +345,8 @@ Request
     "RazaoSocial": null,         
     "CNPJ": null, 
     "DataNascimento": "yyyy-MM-dd",
-    "AceitaReceberOfertas": true 
+    "AceitaReceberOfertas": true,
+    "IsPossuoCarroMarca": false,
   },
   "Assunto": "Teste Parceiro",
   "Mensagem": "Teste parceiro msg",
