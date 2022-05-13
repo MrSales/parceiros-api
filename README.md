@@ -39,7 +39,7 @@
 
 ✅ [Atualizar Status do Usuários](#usuário---ativarinativar)
 
-✅ [Cadastro de Cliente](#cadastrar---cliente)
+✅ [Cadastro de Cliente](#cadastro-de-cliente)
 
 #### Autenticação
 
