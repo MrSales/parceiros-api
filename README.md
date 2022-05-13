@@ -39,6 +39,8 @@
 
 ✅ [Atualizar Status do Usuários](#usuário---ativarinativar)
 
+✅ [Cadastro de Usuários](#consulta-de-usuários-novo---atualizado-em-13052022)
+
 ✅ [Cadastro de Cliente](#cadastro-de-cliente)
 
 #### Autenticação
@@ -492,6 +494,44 @@ Response
     "Data": 0,
     "Success": true,
     "Message": ""
+}
+
+```
+
+#### Consulta de Usuários (novo - atualizado em 13/05/2022)
+
+* Endpoint: parceiro/usuario/{lojaID}
+* Content-type: application/json
+* Verbo: GET
+
+Request
+
+1. Necessário informar token no header
+2. Necessário informar o LojaID no endpoint
+
+Response
+
+```json
+{
+    "Data": [
+    	{
+            "UsuarioID": 1000,
+            "Nome": "Gerente",
+            "Login": "gerente"
+        },
+        {
+            "UsuarioID": 1001,
+            "Nome": "Vendedor 1",
+            "Login": "vendedor1"
+        },
+	{
+            "UsuarioID": 1002,
+            "Nome": "Vendedor 2",
+            "Login": "vendedor2"
+        }	
+    ],
+    "Success": true,
+    "Message": null
 }
 
 ```
