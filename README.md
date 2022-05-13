@@ -39,6 +39,8 @@
 
 ✅ [Atualizar Status do Usuários](#usuário---ativarinativar)
 
+✅ [Cadastro de Cliente](#cadastrar---cliente)
+
 #### Autenticação
 
 ##### Para acessar qualquer serviço da API é necessário passar o Token fixo no header. (Caso não possua um token válido, solicitar em suporte@mrsales.com.br)
@@ -494,4 +496,13 @@ Response
 
 ```
 
+### Cadastro de cliente
+
+1. Necessário informar o token no header
+
+
+
 > dúvidas ou problemas relacionadas API suporte@mrsales.com.br
+
+
+
