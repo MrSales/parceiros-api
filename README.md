@@ -389,7 +389,7 @@ Request
 
 Request
 
-```
+```json
 
 {
   "LojaID": 0,
@@ -416,7 +416,7 @@ Request
 
 Response
 
-```
+```json
 {
     "Data": CODIGO_LEAD_GERADA,
     "Success": true,
@@ -476,7 +476,7 @@ Request
 
 Request
 
-```json
+```text
 {
   "Login": "",  //Login do Usuário no mrsales
   "Status": false
@@ -498,11 +498,86 @@ Response
 
 ### Cadastro de cliente
 
+* Endpoint: parceiro/cliente/[código da loja]
+* Content-type: application/json
+* Verbo: POST
+
+Request
+
 1. Necessário informar o token no header
+2. Necessário informar o [código da loja] no endpoint
+3. Os campos vazio (NULL) não são obrigatórios, mas caso seja exigência do cliente essas informações, deve ser informadas no request.
+
+*Body* 
+```json
+{
+    "Nome": "Sample" ,
+    "CPF": "67306839020",
+    "Email": "sample@test.com",
+    "Telefone": null,       
+    "Celular": null,        
+    "IsPJ": false,          
+    "CNPJ": null,           
+    "RazaoSocial": null,    
+    "Cidade": null,         
+    "UF": null,             
+    "Logradouro": null,     
+    "Numero": null,         
+    "Complemento": null     
+}
+```
+
+Response
+
+```json
+
+{
+    "Data": "41a4cfac-04d4-4734-9b69-b8b19c545443", // código do processamento
+    "Success": true, //status se foi recebido com sucesso
+    "Message": "cliente adicionado a fila de processamento" //mensagem de retorno
+}
+
+```
+
+Response 
+> Caso não seja possível processar o cadastro, a API retorna uma mensagem de erro, mas sempre o StatusCode é 200. (exemplo de retorno a baixo)
+
+```json
+
+{
+    "Data": null,
+    "Success": false,
+    "Message": {
+        "Erros": [
+            {
+                "Campo": "Email",
+                "Mensagem": "obrigatório informar e-mail"
+            }
+        ]
+    }
+}
+```
+
+Webhook
+
+> Para receber as notificações sobre o andamento do cadastro é necessário abrir um ticket em suporte@mrsales.com.br e informar a URL que devemos enviar as notificações
+
+Exemplo de retorno
+
+```json
+
+{
+    "Hash":"0994a13d-bf7f-4e31-8c8a-6b73286cb4ee",
+    "Data":4654584,
+    "Status":true,
+    "Message":"Cadastro realizado com sucesso"
+}
+
+```
 
 
 
-> dúvidas ou problemas relacionadas API suporte@mrsales.com.br
+dúvidas ou problemas relacionadas API suporte@mrsales.com.br
 
 
 
