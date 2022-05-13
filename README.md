@@ -516,14 +516,18 @@ Request
     "Email": "sample@test.com",
     "Telefone": null,       
     "Celular": null,        
+
     "IsPJ": false,          
     "CNPJ": null,           
+    "RGEmissor": null,
     "RazaoSocial": null,    
-    "Cidade": null,         
-    "UF": null,             
+                 
+    "CEP": null,
     "Logradouro": null,     
     "Numero": null,         
-    "Complemento": null     
+    "Complemento": null,
+    "Cidade": null,         
+    "UF": null
 }
 ```
 
