@@ -58,6 +58,10 @@ Exemplo do header
 
 Lista de lojas que o usuário tem permissão para cadastrar lead.
 
+
+#### Nota: Esse endpoint tem um limite de requisições por minuto, aconselhamos o uso de cache nessa chamada pois os dados das lojas não são alterados com freqüencia.
+
+
 * Endpoint: parceiro/lojas
 * Content-type: application/json
 * Verbo: GET
